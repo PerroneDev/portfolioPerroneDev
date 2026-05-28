@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-900 text-zinc-300 antialiased selection:bg-emerald-500/30 selection:text-white;
+  }
+}
+
+@layer utilities {
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  
+  @keyframes slowblob {
+    0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+    33% { transform: translate(8vw, -8vh) scale(1.2) rotate(10deg); }
+    66% { transform: translate(-8vw, 8vh) scale(0.8) rotate(-10deg); }
+    100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  }
+  
+  .animate-blob {
+    animation: blob 15s infinite;
+  }
+  
+  .animate-slowblob {
+    animation: slowblob 40s infinite ease-in-out;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .animation-delay-10000 {
+    animation-delay: 10s;
+  }
+}
