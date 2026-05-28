@@ -152,7 +152,7 @@ function FeaturedProject() {
         {/* PERSISTENT LOCATION GLOW */}
         <div 
           ref={glowRef}
-          className="absolute top-0 left-0 w-[400px] h-[400px] bg-emerald-500/20 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none opacity-0 transition-opacity duration-500 z-0"
+          className="absolute top-0 left-0 w-[250px] h-[250px] bg-emerald-500/20 rounded-full mix-blend-screen filter blur-[80px] pointer-events-none opacity-0 transition-opacity duration-500 z-0"
           style={{ transform: 'translate(-50%, -50%)' }}
         ></div>
         
@@ -366,7 +366,7 @@ function App() {
                 Estudante do 7º período de Ciência da Computação na Estácio. Atualmente, trabalhar direto no suporte de operações tem me ensinado a entender a dor do usuário na prática antes de pensar em código. 
               </p>
               <p className="text-lg md:text-xl text-zinc-400 leading-relaxed text-justify">
-                Sempre fui curioso para entender como as coisas funcionam por baixo do capô — seja montando um PC, mexendo no meu carro ou caçando um bug. Enxergo a programação de um jeito bem prático: como uma ferramenta para resolver problemas e facilitar a rotina.
+                Sempre fui curioso para entender como as coisas funcionam por baixo dos panos, seja montando um PC, mexendo no meu carro ou caçando um bug. Enxergo a programação de um jeito bem prático: como uma ferramenta para resolver problemas e facilitar a rotina.
               </p>
             </div>
 
@@ -420,10 +420,10 @@ function App() {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-10 tracking-tight">Quer <br/><span className="text-emerald-400">bater um papo?</span></h2>
           
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
-            <a href="https://www.linkedin.com/in/vitorperrone/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-emerald-500 hover:border-emerald-500 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
+            <a href="https://www.linkedin.com/in/vitorperrone/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-emerald-500 hover:border-emerald-500 hover:text-zinc-950 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 text-zinc-300 font-medium">
               <FaLinkedin className="w-5 h-5" /> LinkedIn
             </a>
-            <a href="https://github.com/PerroneDev" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-yellow-400 hover:border-yellow-400 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
+            <a href="https://github.com/PerroneDev" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-yellow-400 hover:border-yellow-400 hover:text-zinc-950 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 text-zinc-300 font-medium">
               <FaGithub className="w-5 h-5" /> GitHub
             </a>
             <button 
