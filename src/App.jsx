@@ -142,11 +142,11 @@ function FeaturedProject() {
       >
         {/* WEBGL FLUID CANVAS BACKGROUND */}
         <div className="absolute inset-0 z-0 pointer-events-auto opacity-20 group-hover:opacity-60 transition-opacity duration-700">
-           {/* The canvas is grayscaled so we can tint it perfectly with the gradient overlay */}
-           <canvas ref={canvasRef} className="w-full h-full grayscale contrast-125" />
+           {/* The canvas is grayscaled and brightened so multiply blending works perfectly */}
+           <canvas ref={canvasRef} className="w-full h-full grayscale contrast-150 brightness-150" />
            
-           {/* Colorizing Overlay (Forces the fluid to be Green and Yellow) */}
-           <div className="absolute inset-0 mix-blend-color bg-gradient-to-br from-emerald-500 via-emerald-400 to-yellow-400 pointer-events-none"></div>
+           {/* Colorizing Overlay: Multiply blends the bright fluid with these colors, keeping the black background black */}
+           <div className="absolute inset-0 mix-blend-multiply bg-gradient-to-br from-emerald-400 via-emerald-300 to-yellow-300 pointer-events-none"></div>
         </div>
 
         {/* PERSISTENT LOCATION GLOW */}
@@ -162,7 +162,7 @@ function FeaturedProject() {
         <div className="relative z-10 max-w-2xl pointer-events-none">
           <h4 className="text-3xl md:text-5xl font-bold text-white mb-6 group-hover:text-emerald-400 transition-colors drop-shadow-sm">WaAnalyzer</h4>
           <p className="text-lg text-zinc-300 leading-relaxed mb-10 drop-shadow-sm">
-            Sistema desenvolvido do zero para a operação da Jonck Company. O objetivo foi resolver um gargalo real na gestão de mensagens e atendimento. Feito com foco 100% na utilidade prática e entrega rápida, mostrando capacidade de tirar uma ideia do papel e fazê-la funcionar no mundo real.
+            Um sistema simples que nasceu de uma necessidade real no suporte da Jonck Company. Como o gerenciamento das mensagens no WhatsApp tomava muito tempo da equipe durante os atendimentos, criei essa ferramenta para organizar o fluxo. Foi uma ótima oportunidade para aplicar a programação em um problema prático da nossa rotina e melhorar nosso processo.
           </p>
           
           <span className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500/10 text-emerald-400 rounded-full font-medium border border-emerald-500/20 transition-all duration-300 shadow-lg pointer-events-auto group-hover:bg-emerald-500 group-hover:text-zinc-950">
@@ -199,7 +199,7 @@ function ExperienceSection() {
           company="Jonck Company"
           date="Mar/2026 - Atual"
           role="Suporte de Operações"
-          desc="Identificação de gargalos e criação de ferramentas internas."
+          desc="Atendimento direto aos clientes, suporte operacional no funil de vendas e auxílio nas demandas diárias da equipe, sempre buscando organizar e facilitar o fluxo de trabalho."
           tag="Full-time"
           isCurrent={true}
         />
@@ -354,10 +354,10 @@ function App() {
             <div>
               <h3 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight">Sobre Mim</h3>
               <p className="text-lg md:text-xl text-zinc-400 leading-relaxed mb-6 text-justify">
-                Atualmente no 7º período de Ciência da Computação na Estácio. Diferente do caminho tradicional, construí minha base no suporte de operações. 
+                Estudante do 7º período de Ciência da Computação na Estácio. Atualmente, trabalhar direto no suporte de operações tem me ensinado a entender a dor do usuário na prática antes de pensar em código. 
               </p>
               <p className="text-lg md:text-xl text-zinc-400 leading-relaxed text-justify">
-                Isso me deu a capacidade de entender a dor real do usuário antes de escrever qualquer linha de código. Gosto de investigar como as coisas funcionam por baixo dos panos e aplico essa mesma lógica para resolver bugs e otimizar processos.
+                Sempre fui curioso para entender como as coisas funcionam por baixo do capô — seja montando um PC, mexendo no meu carro ou caçando um bug. Enxergo a programação de um jeito bem prático: como uma ferramenta para resolver problemas e facilitar a rotina.
               </p>
             </div>
 
@@ -365,7 +365,7 @@ function App() {
             <div className="flex flex-col gap-10 pt-4 lg:pt-0">
               
               <div>
-                <h4 className="text-sm text-zinc-500 font-semibold uppercase tracking-wider mb-4">Tecnologias</h4>
+                <h4 className="text-sm text-zinc-500 font-semibold uppercase tracking-wider mb-4">Hard Skills</h4>
                 <div className="flex flex-wrap gap-2.5">
                   {['Python', 'JavaScript', 'HTML', 'CSS', 'Git', 'Lógica de Programação'].map(tech => (
                     <span key={tech} className="px-4 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full text-sm text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default">
@@ -389,7 +389,7 @@ function App() {
               <div>
                 <h4 className="text-sm text-zinc-500 font-semibold uppercase tracking-wider mb-4">Ferramentas</h4>
                 <div className="flex flex-wrap gap-2.5">
-                  {['DaVinci Resolve', 'Figma básico', 'IA'].map(tool => (
+                  {['Figma', 'Ferramentas de IA'].map(tool => (
                     <span key={tool} className="px-4 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full text-sm text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default">
                       {tool}
                     </span>
@@ -407,17 +407,17 @@ function App() {
         <ExperienceSection />
 
         {/* FOOTER & CONTACT */}
-        <footer className="border-t border-zinc-800 pt-16 pb-8 flex flex-col items-center justify-center text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-10 tracking-tight">Vamos construir algo <br/><span className="text-emerald-400">juntos?</span></h2>
+        <footer className="pt-16 pb-8 flex flex-col items-center justify-center text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-10 tracking-tight">Quer <br/><span className="text-emerald-400">bater um papo?</span></h2>
           
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
-            <a href="#" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-emerald-500 hover:border-emerald-500 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
+            <a href="https://www.linkedin.com/in/vitorperrone/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-emerald-500 hover:border-emerald-500 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
               <FaLinkedin className="w-5 h-5" /> LinkedIn
             </a>
-            <a href="https://github.com/PerroneDev" target='_blank' className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-yellow-400 hover:border-yellow-400 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
+            <a href="https://github.com/PerroneDev" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-yellow-400 hover:border-yellow-400 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
               <FaGithub className="w-5 h-5" /> GitHub
             </a>
-            <a href="mailto:contato@email.com" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-100 hover:border-zinc-100 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
+            <a href="mailto:vitorltperrone@gmail.com" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-100 hover:border-zinc-100 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
               <FaEnvelope className="w-5 h-5" /> E-mail
             </a>
           </div>
