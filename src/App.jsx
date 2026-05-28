@@ -162,7 +162,7 @@ function FeaturedProject() {
         <div className="relative z-10 max-w-2xl pointer-events-none">
           <h4 className="text-3xl md:text-5xl font-bold text-white mb-6 group-hover:text-emerald-400 transition-colors drop-shadow-sm">WaAnalyzer</h4>
           <p className="text-lg text-zinc-300 leading-relaxed mb-10 drop-shadow-sm">
-            Um sistema simples que nasceu de uma necessidade real no suporte da Jonck Company. Como o gerenciamento das mensagens no WhatsApp tomava muito tempo da equipe durante os atendimentos, criei essa ferramenta para organizar o fluxo. Foi uma ótima oportunidade para aplicar a programação em um problema prático da nossa rotina e melhorar nosso processo.
+            Um sistema em constante aprimoramento que nasceu de uma necessidade real no suporte da Jonck Company. Como o gerenciamento das mensagens no WhatsApp tomava muito tempo da equipe durante os atendimentos, criei essa ferramenta para organizar o fluxo. Foi uma ótima oportunidade para aplicar a programação em um problema prático da nossa rotina e melhorar nosso processo.
           </p>
           
           <span className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500/10 text-emerald-400 rounded-full font-medium border border-emerald-500/20 transition-all duration-300 shadow-lg pointer-events-auto group-hover:bg-emerald-500 group-hover:text-zinc-950">
