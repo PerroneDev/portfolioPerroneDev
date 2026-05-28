@@ -199,7 +199,7 @@ function ExperienceSection() {
           company="Jonck Company"
           date="Mar/2026 - Atual"
           role="Suporte de Operações"
-          desc="Atendimento direto aos clientes, suporte operacional no funil de vendas e auxílio nas demandas diárias da equipe, sempre buscando organizar e facilitar o fluxo de trabalho."
+          desc="Atendimento direto aos clientes, suporte operacional no funil de lançamentos e auxílio nas demandas diárias da equipe, sempre buscando organizar e facilitar o fluxo de trabalho."
           tag="Full-time"
           isCurrent={true}
         />
