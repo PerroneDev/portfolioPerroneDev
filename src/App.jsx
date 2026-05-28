@@ -366,7 +366,7 @@ function App() {
                 Estudante do 7º período de Ciência da Computação na Estácio. Atualmente, trabalhar direto no suporte de operações tem me ensinado a entender a dor do usuário na prática antes de pensar em código. 
               </p>
               <p className="text-lg md:text-xl text-zinc-400 leading-relaxed text-justify">
-                Sempre fui curioso para entender como as coisas funcionam por baixo dos panos, seja montando um PC, mexendo no meu carro ou caçando um bug. Enxergo a programação de um jeito bem prático: como uma ferramenta para resolver problemas e facilitar a rotina.
+                Sempre fui curioso para entender como as coisas funcionam por baixo dos panos. Enxergo a programação de um jeito bem prático: como uma ferramenta para resolver problemas e facilitar a rotina.
               </p>
             </div>
 
