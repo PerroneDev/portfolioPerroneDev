@@ -299,6 +299,15 @@ function ExperienceItem({ company, date, role, desc, tag, isCurrent }) {
 }
 
 function App() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const handleCopyEmail = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('vitorltperrone@gmail.com');
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
   return (
     <div className="min-h-screen relative bg-zinc-900 overflow-x-hidden text-zinc-300 font-sans selection:bg-emerald-500/30 selection:text-white">
       
@@ -417,9 +426,9 @@ function App() {
             <a href="https://github.com/PerroneDev" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-yellow-400 hover:border-yellow-400 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
               <FaGithub className="w-5 h-5" /> GitHub
             </a>
-            <a href="mailto:vitorltperrone@gmail.com" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-100 hover:border-zinc-100 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
-              <FaEnvelope className="w-5 h-5" /> E-mail
-            </a>
+            <button onClick={handleCopyEmail} className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-100 hover:border-zinc-100 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
+              <FaEnvelope className="w-5 h-5" /> {emailCopied ? 'Copiado!' : 'E-mail'}
+            </button>
           </div>
 
           <p className="text-zinc-500 text-sm uppercase tracking-widest">
