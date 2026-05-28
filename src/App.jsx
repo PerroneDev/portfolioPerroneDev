@@ -426,7 +426,14 @@ function App() {
             <a href="https://github.com/PerroneDev" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-yellow-400 hover:border-yellow-400 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
               <FaGithub className="w-5 h-5" /> GitHub
             </a>
-            <button onClick={handleCopyEmail} className="flex items-center justify-center gap-3 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-100 hover:border-zinc-100 hover:text-zinc-950 transition-all duration-300 text-zinc-300 font-medium">
+            <button 
+              onClick={handleCopyEmail} 
+              className={`flex items-center justify-center gap-3 px-6 py-4 rounded-full font-medium cursor-pointer transition-all duration-300 ${
+                emailCopied 
+                  ? 'bg-emerald-500 border border-emerald-500 text-zinc-950 scale-95' 
+                  : 'bg-zinc-900 border border-zinc-800 text-zinc-300 hover:bg-white hover:border-white hover:text-red-600 hover:-translate-y-1 hover:shadow-lg'
+              }`}
+            >
               <FaEnvelope className="w-5 h-5" /> {emailCopied ? 'Copiado!' : 'E-mail'}
             </button>
           </div>
